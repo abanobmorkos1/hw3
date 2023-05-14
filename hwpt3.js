@@ -1,3 +1,16 @@
+console.log("setAlarm---------------------------------------------"); 
+const setAlarm = (employed, vacationing) => {
+    if (employed && !vacationing) {
+      console.log(true);
+    } else {
+      console.log(false);
+    }
+  };
+  setAlarm(true, true) // => returns false
+  setAlarm(false, false) // => returns false
+  setAlarm(false, true) // => returns false
+  setAlarm(true, false) // => returns true
+  
 function trollsBeGone(sentence) {
     const letters = ["a" , "e" , "i" , "o" , "u"];
     let trollBack = '';
@@ -9,9 +22,10 @@ function trollsBeGone(sentence) {
     }
     return trollBack;
 } 
+console.log("TrollsBeGone--------------------------------------------"); 
 console.log(trollsBeGone("This website is for losers LOL")); 
 
-console.log(trollsBeGone("---------------------------------------------")); 
+console.log("bankAccountSummary---------------------------------------------"); 
 
  const bankInfo = {
     savings : 1000,
@@ -19,21 +33,9 @@ console.log(trollsBeGone("---------------------------------------------"));
     moneyMakret : 500,
     creditCard : 1300,
  }
-const bankAccountSummary = (bankInfo) => {
-    let bankTotal = ""
-    
-for ( let account in bankInfo) {
-    bankTotal += bankInfo;
+function bankAccountSummary  (){
+   const total = bankInfo.savings + bankInfo.checkings + bankInfo.moneyMakret + bankInfo.creditCard
+   console.log(`Total balance ${total}`)
+
 }
-return bankTotal;
-} 
-const bankTotal = bankAccountSummary(bankInfo);
-console.log(bankTotal); 
-
-function inTheRed(bankTotal) {
-  return bankTotal < 0;
-}
-
-const isNegative = inTheRed(bankTotal);
-console.log(isNegative); 
-
+bankAccountSummary()
